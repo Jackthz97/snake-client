@@ -5,11 +5,15 @@ const connect = function() {
     host: "165.227.47.243",
     port: "50541"
   });
+  //register a connect handler that prints out a message when connected
+  conn.on("connect", ()=>{
+    console.log("Successfully connected to game server");
+    //displays name on the server after successfully connected
+    conn.write("Name: Jak");
+  });
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  conn.write("Name: Jak");
-  // conn.write('Move: Up');
-  // conn.write('Move: DOwn');
+
   conn.on("data", (data) => {
     console.log(data);
   });
