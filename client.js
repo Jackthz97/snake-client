@@ -10,6 +10,11 @@ const connect = function() {
     console.log("Successfully connected to game server");
     //displays name on the server after successfully connected
     conn.write("Name: Jak");
+    // let timer = 0;
+
+    setInterval(() => {
+      conn.write('Move: up');
+    }, 50);
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
