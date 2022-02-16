@@ -1,4 +1,4 @@
-const client = require('./client');
+const {conn} = require('./client');
 const stdin = process.stdin;
 stdin.setEncoding('utf8');
 
@@ -16,28 +16,31 @@ const handleUserInput = function(input) {
     process.exit();
   }
   if (input === 'w') {
-    client.conn.write('Move: up');
+    conn.write('Move: up');
   }
   if (input === 's') {
-    client.conn.write('Move: down');
+    conn.write('Move: down');
   }
   if (input === 'a') {
-    client.conn.write('Move: left');
+    conn.write('Move: left');
   }
   if (input === 'd') {
-    client.conn.write('Move: right');
+    conn.write('Move: right');
   }
   if (input === 'p') {
-    client.conn.write('Say: BRUUUH');
+    conn.write('Say: BRUUUH');
   }
   if (input === 'o') {
-    client.conn.write('Say: MOVE OUT THE WAYYY');
+    conn.write('Say: MOVE OUT THE WAYYY');
   }
   if (input === 'i') {
-    client.conn.write('Say: GET IN MY BELLY');
+    conn.write('Say: GET IN MY BELLY');
   }
   if (input === 'u') {
-    client.conn.write('Say: YUMMM');
+    conn.write('Say: YUMMM');
+  }
+  if (input === 'y') {
+    conn.write('Say: I\'m hungry');
   }
 };
 
