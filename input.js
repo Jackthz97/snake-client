@@ -27,6 +27,18 @@ const handleUserInput = function(input) {
   if (input === 'd') {
     client.conn.write('Move: right');
   }
+  if (input === 'p') {
+    client.conn.write('Say: BRUUUH');
+  }
+  if (input === 'o') {
+    client.conn.write('Say: MOVE OUT THE WAYYY');
+  }
+  if (input === 'i') {
+    client.conn.write('Say: GET IN MY BELLY');
+  }
+  if (input === 'u') {
+    client.conn.write('Say: YUMMM');
+  }
 };
 
 module.exports = setupInput;
